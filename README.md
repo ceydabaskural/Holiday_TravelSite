@@ -10,7 +10,7 @@
 
 # Technologies
 * ASP.NET MVC 5
-*Code First Approach
+* Code First Approach
 * Entity Framework
 * LINQ Queries
 * Partial Views
