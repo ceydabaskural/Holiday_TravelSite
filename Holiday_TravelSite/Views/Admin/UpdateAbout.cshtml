@@ -1,0 +1,25 @@
+﻿@model Holiday_TravelSite.Models.Entities.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>About Update Page</h2>
+<br />
+@using (Html.BeginForm("UpdateAbout", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.AboutId)
+    @Html.TextBoxFor(x => x.AboutId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.ImageUrl)
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+}
+
+

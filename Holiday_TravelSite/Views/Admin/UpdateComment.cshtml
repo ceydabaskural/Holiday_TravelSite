@@ -1,0 +1,28 @@
+﻿@model Holiday_TravelSite.Models.Entities.Comment
+
+@{
+    ViewBag.Title = "UpdateComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Comment Update Page</h2>
+<br />
+@using (Html.BeginForm("UpdateComment", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.CommentId)
+    @Html.TextBoxFor(x => x.CommentId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Username)
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Review)
+    @Html.TextAreaFor(x => x.Review, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+}

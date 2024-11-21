@@ -1,0 +1,33 @@
+﻿@using Holiday_TravelSite.Models.Entities
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Blog List</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Title</td>
+            <td><a href="/Admin/DeleteBlog/@item.BlogId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/UpdateBlog/@item.BlogId" class="btn btn-warning">Update</a></td>
+            <td><a href="/Admin/DetailBlog/@item.BlogId" class="btn btn-outline-dark">Details</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/CreateBlog/" class="btn btn-primary">Create Blog</a>

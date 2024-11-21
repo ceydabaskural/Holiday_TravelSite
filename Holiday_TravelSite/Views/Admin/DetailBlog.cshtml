@@ -1,0 +1,21 @@
+﻿@model Holiday_TravelSite.Models.Entities.Blog
+@{
+    ViewBag.Title = "DetailBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2 class="mb-4">Blog Details</h2>
+
+<b>Title:</b> @Html.DisplayFor(x => x.Title)
+<br />
+<br />
+<b>Date:</b>@Html.DisplayFor(x => x.Date)
+<br />
+<br />
+<b>Description:</b> @Html.DisplayFor(x => x.Description)
+<br />
+<br />
+<b>ImageUrl:</b> @Html.DisplayFor(x => x.ImageUrl)
+
+
